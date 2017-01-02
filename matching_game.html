@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <style>
+    div.relative {
+      position: relative;
+      left: 500px;
+      width: 500px;
+      height: 500px;
+      border-left: 2px solid black;
+    }
+
+    div.absolute {
+      position: absolute;
+      width: 500px;
+      height: 500px;
+    }
+
+    img{
+      position: absolute;
+    }
+  </style>
+
+  <head>
+    <meta charset="utf-8">
+    <title>Find the Difference</title>
+
+    <script type="text/javascript">
+      var num_of_faces = 5;
+      var the_left_side = document.getElementById("leftSide");
+
+      function generateFaces()
+      {
+        for(var i=0 ; i<num_of_faces ; i++)
+        {
+          numH = Math.floor(Math.random()*400);
+          numV = Math.floor(Math.random()*400);
+          var img = document.createElement("img");
+          img.src="http://home.cse.ust.hk/~rossiter/mooc/matching_game/smile.png"
+          img.style.top = numV + 'px';
+          img.style.left = numH + 'px';
+          the_left_side.appendChild(img);
+        }
+      }
+    </script>
+  </head>
+
+  <body onload = "generateFaces()">
+
+    <h1>Matching Game</h1>
+    <p>Click on the odd one out from your left</p>
+    <div id = "leftSide" class="absolute"></div>
+    <div id = "rightSide" class="relative"></div>
+
+
+
+
+  </body>
+</html>
