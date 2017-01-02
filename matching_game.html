@@ -26,7 +26,6 @@
 
     <script type="text/javascript">
       var num_of_faces = 5;
-      var the_left_side = document.getElementById("leftSide");
 
       function generateFaces()
       {
@@ -38,7 +37,7 @@
           img.src="http://home.cse.ust.hk/~rossiter/mooc/matching_game/smile.png"
           img.style.top = numV + 'px';
           img.style.left = numH + 'px';
-          the_left_side.appendChild(img);
+          document.getElementById("leftSide").appendChild(img);
         }
       }
     </script>
